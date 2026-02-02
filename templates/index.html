@@ -12,6 +12,25 @@
 </head>
 
 <body>
+<!-- TOP RIGHT PROFILE MENU -->
+<div class="top-nav">
+    <div class="profile-wrapper">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+             class="profile-icon"
+             onclick="toggleMenu()">
+
+        <div id="profileDropdown" class="profile-dropdown">
+            <a href="#">Need Support</a>
+            <a href="#">Internship Registration</a>
+            <a href="#">Collaboration</a>
+            <a href="#">About Project</a>
+            <hr>
+            <a href="#" class="logout">Logout</a>
+        </div>
+    </div>
+</div>
+
+
     <div class="container">
         <h1>Internship Recommendation Portal</h1>
 
@@ -21,6 +40,18 @@
             <button type="submit">Get Recommendation</button>
         </form>
     </div>
+<footer class="footer">
+    Developed by <span>Mohammad Meraj</span>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("profileDropdown")
+            .classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
+
 

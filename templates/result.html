@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Internships</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="result-page">
+
+<div class="result-container">
+    <h1 class="result-title">Recommended Internships</h1>
+
+    {% for internship in recommendations %}
+    <div class="internship-card">
+        <h2>{{ internship.title }}</h2>
+
+        <p><strong>Company:</strong> {{ internship.company }}</p>
+        <p><strong>Location:</strong> {{ internship.location }}</p>
+        <p><strong>Stipend:</strong> {{ internship.stipend }}</p>
+
+        <p class="desc">{{ internship.desc }}</p>
+
+        <a href="{{ internship.url }}" target="_blank" class="apply-btn">
+            Apply Now →
+        </a>
+    </div>
+    {% endfor %}
+
+    <a href="/" class="back-link">← Try Again</a>
+</div>
+
+</body>
+</html>
