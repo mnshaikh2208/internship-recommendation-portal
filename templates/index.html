@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Recommendation Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Internship Recommendation Portal</h1>
+
+        <form action="/recommend" method="post">
+            <input type="text" name="skills" placeholder="e.g. Python, HTML" required>
+            <input type="text" name="interest" placeholder="e.g. Data, ML" required>
+            <button type="submit">Get Recommendation</button>
+        </form>
+    </div>
+</body>
+</html>
+
